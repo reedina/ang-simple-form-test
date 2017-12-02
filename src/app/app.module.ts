@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { TeamsComponent } from './teams/teams.component';
+import { TeamsService } from './teams/teams.service';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [TeamsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
